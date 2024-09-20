@@ -1,10 +1,15 @@
 <?php
+// Inciciliza la sesión o toma la existente
 session_start();
 
-if (!isset($_SESSION['tareas'])) {
+// Se verifica si existe la variable de sesión tareas
+if (!isset($_SESSION['tareas']))
+{
+    // Si no existe, se inicializa como un array vacío
     $_SESSION['tareas'] = [];
 }
 
+// Copiamos la variable de sesión a un array local
 $tareas = $_SESSION['tareas'];
 ?>
 <!DOCTYPE html>
@@ -28,6 +33,7 @@ $tareas = $_SESSION['tareas'];
             </thead>
             <tbody>
             <?php
+                // Se recorre la lista de tareas
                 for ($i = 0; $i < count($tareas); $i++)
                 {
                     echo '<tr><td>' . $tareas[$i] . '</td></tr>';
