@@ -1,5 +1,5 @@
 <?php
-// Inciciliza la sesión o toma la existente
+// Inicializa la sesión o toma la existente
 session_start();
 
 // Se verifica si existe la variable de sesión tareas
